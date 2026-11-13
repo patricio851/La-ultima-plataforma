@@ -1,27 +1,27 @@
+
 extends CharacterBody2D
 
-# Variables configurables de movimiento
-@export var SPEED = 300.0
-@export var JUMP_VELOCITY = -400.0
-@export var MAX_JUMPS = 3
+# Movimiento
+@export var SPEED: float = 300.0
+@export var JUMP_VELOCITY: float = -400.0
+@export var MAX_JUMPS: int = 3
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var jump_count = 0
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
+var jump_count: int = 0
 
-# Referencias a los nodos
-@onready var sprite = $Ranji
-@onready var animation = $Ranji
+# Referencia al personaje
+@onready var ranji = $Ranji
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 
-	# 1. Gravedad y reinicio de saltos
+	# 1. Gravedad y saltos
 	if is_on_floor():
 		jump_count = 0
 	else:
 		velocity.y += gravity * delta
 
-	# 2. Sistema de salto y doble/triple salto
+	# 2. Saltar
 	if Input.is_action_just_pressed("ui_accept"):
 		if is_on_floor() or jump_count < MAX_JUMPS:
 			velocity.y = JUMP_VELOCITY
@@ -30,24 +30,28 @@ func _physics_process(delta):
 	# 3. Movimiento horizontal
 	var direction = Input.get_axis("ui_left", "ui_right")
 
-	if direction:
+	if direction != 0:
 		velocity.x = direction * SPEED
+		print("Velocidad actual: ", SPEED)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	# 4. Voltear el robot
+	# 4. Girar a Ranji
 	if direction > 0:
-		sprite.flip_h = true
+		ranji.flip_h = true
 	elif direction < 0:
-		sprite.flip_h = false
+		ranji.flip_h = false
 
-	# 5. Animaciones
-	if direction > 0:
-		animation.play("Left")
-	elif direction < 0:
-		animation.play("Left")
-	else:
-		animation.play("Idle")
-
-	# 6. Procesar físicas
+	# 5. Movimiento y colisiones
 	move_and_slide()
+
+	# 6. Animaciones
+	if not is_on_floor():
+		if velocity.y < 0:
+			ranji.play("Jump")
+		else:
+			ranji.play("Fall")
+	elif direction != 0:
+		ranji.play("Left")
+	else:
+		ranji.play("Idle")

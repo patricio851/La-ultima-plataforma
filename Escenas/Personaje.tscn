@@ -6,12 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://bbq4sxpwsqwtw" path="res://Personaje/Imagenes/Ranji 2.png" id="3_0kjke"]
 [ext_resource type="Texture2D" uid="uid://c58yk2di8ku02" path="res://Personaje/Imagenes/Ranji Derecha2.png" id="3_ok32j"]
 [ext_resource type="Texture2D" uid="uid://dhf1a5151vxbm" path="res://Personaje/Imagenes/Ranji Derecha 3.png" id="4_72rsm"]
+[ext_resource type="Texture2D" uid="uid://4ub8vo14l4ot" path="res://Personaje/Imagenes/Diseño_sin_título-removebg-preview.png" id="4_k3uqj"]
 [ext_resource type="Texture2D" uid="uid://cdpxgxxo6cm0k" path="res://Personaje/Imagenes/Izquierda 3.png" id="4_ndubs"]
 [ext_resource type="Texture2D" uid="uid://x07vnp6ucoxu" path="res://Personaje/Imagenes/Izquiera 2.png" id="5_k3uqj"]
 [ext_resource type="Texture2D" uid="uid://digvapc1e1na" path="res://Personaje/Imagenes/Izquierda.png" id="6_8u173"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f7uq2"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"Fall",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_0kjke")
@@ -22,6 +28,14 @@ animations = [{
 "loop": 1,
 "name": &"Idle",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k3uqj")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -59,14 +73,18 @@ height = 144.0
 [node name="Personaje" type="CharacterBody2D" unique_id=1651539906]
 position = Vector2(201, 222)
 script = ExtResource("1_0gco6")
+SPEED = 600.0
 
 [node name="Ranji" type="AnimatedSprite2D" parent="." unique_id=1396417867]
-position = Vector2(248.05508, 141.21823)
-scale = Vector2(0.3601008, 0.36349213)
+position = Vector2(244.99998, 134)
+scale = Vector2(0.37574518, 0.38695088)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
 animation = &"Left"
-frame_progress = 0.11260281
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24301644]
-position = Vector2(252, 138)
+position = Vector2(240, 128)
 shape = SubResource("CapsuleShape2D_0c0kl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1750885953]
+position = Vector2(253, 34)
+zoom = Vector2(0.8, 0.8)
