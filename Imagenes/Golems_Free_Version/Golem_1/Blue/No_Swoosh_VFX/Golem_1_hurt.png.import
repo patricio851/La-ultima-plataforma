@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ytwvbm4nwy1h"
-path="res://.godot/imported/Diseño_sin_título__1_-removebg-preview-removebg-preview.png-3c08aaedb0cf7d3136e14773fe1a541f.ctex"
+uid="uid://jtqvd67blwtc"
+path="res://.godot/imported/Golem_1_hurt.png-713c93519624ffc0f4954ef6c0a5f660.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personaje/Imagenes/Diseño_sin_título__1_-removebg-preview-removebg-preview.png"
-dest_files=["res://.godot/imported/Diseño_sin_título__1_-removebg-preview-removebg-preview.png-3c08aaedb0cf7d3136e14773fe1a541f.ctex"]
+source_file="res://Imagenes/Golems_Free_Version/Golem_1/Blue/No_Swoosh_VFX/Golem_1_hurt.png"
+dest_files=["res://.godot/imported/Golem_1_hurt.png-713c93519624ffc0f4954ef6c0a5f660.ctex"]
 
 [params]
 

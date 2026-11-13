@@ -2,18 +2,22 @@
 
 [ext_resource type="Script" uid="uid://c68m8axcx3ja5" path="res://Scripts/personaje.gd" id="1_0gco6"]
 [ext_resource type="Texture2D" uid="uid://b8345ajdx0ir4" path="res://Personaje/Imagenes/Ranji.png" id="2_0kjke"]
+[ext_resource type="Texture2D" uid="uid://cu5716v3cu18q" path="res://Personaje/Imagenes/Diseño_sin_título__2_-removebg-preview (1)-1.png.png" id="2_8u173"]
 [ext_resource type="Texture2D" uid="uid://cw7t8rlvfidf8" path="res://Personaje/Imagenes/Ranji Derecha1.png" id="2_7216l"]
 [ext_resource type="Texture2D" uid="uid://bbq4sxpwsqwtw" path="res://Personaje/Imagenes/Ranji 2.png" id="3_0kjke"]
 [ext_resource type="Texture2D" uid="uid://c58yk2di8ku02" path="res://Personaje/Imagenes/Ranji Derecha2.png" id="3_ok32j"]
 [ext_resource type="Texture2D" uid="uid://dhf1a5151vxbm" path="res://Personaje/Imagenes/Ranji Derecha 3.png" id="4_72rsm"]
-[ext_resource type="Texture2D" uid="uid://4ub8vo14l4ot" path="res://Personaje/Imagenes/Diseño_sin_título-removebg-preview.png" id="4_k3uqj"]
 [ext_resource type="Texture2D" uid="uid://cdpxgxxo6cm0k" path="res://Personaje/Imagenes/Izquierda 3.png" id="4_ndubs"]
+[ext_resource type="Texture2D" uid="uid://bwhihwk2qq7nj" path="res://Personaje/Imagenes/afd2fd02-bd7d-4349-8f4e-32d6dc914a73-1.png (2).png" id="5_8u173"]
 [ext_resource type="Texture2D" uid="uid://x07vnp6ucoxu" path="res://Personaje/Imagenes/Izquiera 2.png" id="5_k3uqj"]
 [ext_resource type="Texture2D" uid="uid://digvapc1e1na" path="res://Personaje/Imagenes/Izquierda.png" id="6_8u173"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f7uq2"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8u173")
+}],
 "loop": 1,
 "name": &"Fall",
 "speed": 5.0
@@ -31,11 +35,11 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_k3uqj")
+"texture": ExtResource("5_8u173")
 }],
 "loop": 1,
 "name": &"Jump",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -74,12 +78,14 @@ height = 144.0
 position = Vector2(201, 222)
 script = ExtResource("1_0gco6")
 SPEED = 600.0
+JUMP_VELOCITY = -500.0
 
 [node name="Ranji" type="AnimatedSprite2D" parent="." unique_id=1396417867]
 position = Vector2(244.99998, 134)
 scale = Vector2(0.37574518, 0.38695088)
 sprite_frames = SubResource("SpriteFrames_f7uq2")
-animation = &"Left"
+animation = &"Jump"
+frame_progress = 0.5718927
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24301644]
 position = Vector2(240, 128)
@@ -87,4 +93,4 @@ shape = SubResource("CapsuleShape2D_0c0kl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1750885953]
 position = Vector2(253, 34)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.6, 0.6)

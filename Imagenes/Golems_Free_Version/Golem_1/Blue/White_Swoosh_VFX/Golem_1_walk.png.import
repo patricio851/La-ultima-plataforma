@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lankpmoup7ey"
-path="res://.godot/imported/salto 1.png-e3da9dc1c1feb44cde13c512bf268f89.ctex"
+uid="uid://tbtj1vgknyxu"
+path="res://.godot/imported/Golem_1_walk.png-53058770b0cbfeeae54bef26b906befc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personaje/Imagenes/salto 1.png"
-dest_files=["res://.godot/imported/salto 1.png-e3da9dc1c1feb44cde13c512bf268f89.ctex"]
+source_file="res://Imagenes/Golems_Free_Version/Golem_1/Blue/White_Swoosh_VFX/Golem_1_walk.png"
+dest_files=["res://.godot/imported/Golem_1_walk.png-53058770b0cbfeeae54bef26b906befc.ctex"]
 
 [params]
 
