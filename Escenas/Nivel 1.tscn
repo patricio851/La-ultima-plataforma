@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://crstipwih40xu"]
+[gd_scene format=3 uid="uid://crstipwih40xu"]
 
 [ext_resource type="PackedScene" uid="uid://yfnjq6pn2dh2" path="res://Escenas/Personaje.tscn" id="2_rjcp1"]
 [ext_resource type="Texture2D" uid="uid://08ro8cr13k8t" path="res://Imagenes/images (1).jpg" id="3_gw03o"]
 [ext_resource type="PackedScene" uid="uid://bcg5h6unf14n0" path="res://Enemys/golem_h.tscn" id="4_gw03o"]
 [ext_resource type="Texture2D" uid="uid://xir4egfnbtku" path="res://Imagenes/Pasto.jpg" id="4_xrc30"]
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c0kl"]
 size = Vector2(6115.5, 329)
 
@@ -1818,6 +1819,10 @@ sources/2 = SubResource("TileSetAtlasSource_7lvdd")
 position = Vector2(3061.25, 614.5)
 shape = SubResource("RectangleShape2D_0c0kl")
 
+=======
+[node name="Nivel1" type="StaticBody2D" unique_id=1404344540]
+
+>>>>>>> Stashed changes
 [node name="Personaje" parent="." unique_id=1651539906 instance=ExtResource("2_rjcp1")]
 position = Vector2(292, 220)
 JUMP_VELOCITY = -600.0
