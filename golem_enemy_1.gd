@@ -20,7 +20,7 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			$AnimatedSprite2D.flip_h = true
 		
-	
+	#hola hola probando
 	
 	
 	move_and_slide()
