@@ -11,7 +11,10 @@ config_version=5
 [application]
 
 config/name="La ultima plataforma"
+<<<<<<< HEAD
 run/main_scene="uid://qr62sowijqe2"
+=======
+>>>>>>> 31badd6c4fec380eae340f8c2f09502756f75daa
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Imagenes/icon.svg"
 
